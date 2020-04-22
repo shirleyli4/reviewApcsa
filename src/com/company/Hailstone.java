@@ -14,7 +14,7 @@ public class Hailstone {
         if(n==1){
             return 1;
         }else if(n%2==0){
-            int len=1;
+            int len=3;
             while(n>=1){
                 n/=2;
                 len++;
@@ -22,7 +22,7 @@ public class Hailstone {
             return len;
         }else{
             int m=3*n+1;
-            int len=2;
+            int len=4;
             while(m>=1){
                 m/=2;
                 len++;
@@ -53,9 +53,9 @@ public class Hailstone {
      */
     public static double propLong(int n) {
         /* to be implemented in part (c) */
-        int numLong=0;
+       double numLong=0;
         for(int i=1;i<=n;i++){
-            if(isLongSeq(i)==true){
+            if(isLongSeq(i)){
                 numLong++;
             }
         }
