@@ -1,6 +1,8 @@
+
 package com.company;
 
 public class Hailstone {
+
 
     /**
      * Returns the length of a hailstone sequence that starts with n,
@@ -10,8 +12,10 @@ public class Hailstone {
     /*
     3n+1
      */
+
     public static int hailstoneLength(int n) {
         /* to be implemented in part (a) */
+
         if (n == 1) {
             return 1;
         } else {
@@ -27,7 +31,7 @@ public class Hailstone {
             }
             return len;
         }
-
+    }
 
         /** Returns true if the hailstone sequence that starts with n is considered long
          * and false otherwise, as described in part (b).
@@ -35,6 +39,7 @@ public class Hailstone {
          */
         public static boolean isLongSeq(int n){
             /* to be implemented in part (b) */
+
             boolean ret = false;
             int length = hailstoneLength(n);
             if (length > n) {
@@ -48,8 +53,10 @@ public class Hailstone {
          * as described in part (c).
          * Precondition: n > 0
          */
+
         public static double propLong(int n){
             /* to be implemented in part (c) */
+
             double numLong = 0;
             for (int i = 1; i <= n; i++) {
                 if (isLongSeq(i)) {
@@ -64,4 +71,8 @@ public class Hailstone {
 
     }
 
-}
+
+
+
+
+
