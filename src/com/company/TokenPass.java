@@ -31,12 +31,12 @@ public class TokenPass {
      */
     public void distributeCurrentPlayerTokens() {
         int old = board[currentPlayer];
-        while (old != 0) {
-            for (int i = 1; i <= board.length; i++) {
-                board[currentPlayer+1]+=1;
+        for(int i=1;i<old;i++) {
+            if (currentPlayer + i <= board.length - 1) {
+                board[currentPlayer + i] = +1;
+            } else {
+                board[currentPlayer + i - board.length] += 1;
             }
-
-
         }
 
     }
